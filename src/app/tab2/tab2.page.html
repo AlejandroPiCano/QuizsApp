@@ -1,23 +1,30 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Music
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/music.png" alt="" />
-      <ion-card-header>
-        <ion-card-title>Welcome to Music Quizs</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Answer music quizs in a very short time.</p>
-      </ion-card-content>
-    </ion-card>
-    <div class="row" text-center> 
-      <ion-button shape="round" >Get Started</ion-button>
-    </div>
-   
-</ion-content>
+    <ion-toolbar>
+      <ion-title text-center >
+       <h3>Music</h3> 
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <!-- ion-card -->
+      <ion-card class="welcome-card" color="primary">
+        <img src="/assets/music.png" alt="" />
+        <ion-card-header>
+           <ion-row justify-content-center>
+              <ion-card-title>Welcome to Music Quizs</ion-card-title>
+           </ion-row> 
+       </ion-card-header>
+        <ion-card-content justify-content-center>
+          <p text-center >Answer music quizs in a very short time.</p>
+        </ion-card-content>
+      </ion-card>
+  <!-- ion-card -->
+      <div  text-center style="margin-top: 10vh"> 
+        <ion-button shape="round" large icon-right (click)="getMusicQuestions($event)">
+          Get Started
+          <ion-icon name="play"></ion-icon>
+        </ion-button>
+      </div>    
+  </ion-content>
+  

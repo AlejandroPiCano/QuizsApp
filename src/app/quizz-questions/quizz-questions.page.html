@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{QuestionTypeTitle}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+    <ion-card-header>
+      <ion-card-title >{{CurrentQuestion.description}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  
+  <ion-list>
+    <!-- <button ion-item *ngFor="let answer of CurrentAnswers">
+      {{answer.answerId}} - {{answer.description}}
+    </button> -->
+
+    <ion-card *ngFor="let answer of CurrentAnswers" (click)="evaluateQuestion($event)">
+      <ion-card-header>
+        <ion-card-title [attr.isTrue]="answer.isCorrect" >{{answer.description}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </ion-list>
+  
+  
+ 
+
+
+</ion-content>

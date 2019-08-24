@@ -1,23 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Sports
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/sports.png" alt="" />
-      <ion-card-header>
-        <ion-card-title>Welcome to Sports Quizs</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Answer sports quizs in a very short time.</p>
-      </ion-card-content>
-    </ion-card>
-    <div class="row" text-center> 
-      <ion-button shape="round" >Get Started</ion-button>
-    </div>
-   
-</ion-content>
+    <ion-toolbar>
+      <ion-title text-center >
+       <h3>Sports</h3> 
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <!-- ion-card -->
+      <ion-card class="welcome-card" color="primary">
+        <div text-center>
+        <img  src="/assets/sports.png" alt="" />
+      </div>
+        <ion-card-header>
+           <ion-row justify-content-center>
+              <ion-card-title>Welcome to Sports Quizs</ion-card-title>
+           </ion-row> 
+       </ion-card-header>
+        <ion-card-content justify-content-center>
+          <p text-center >Answer sports quizs in a very short time.</p>
+        </ion-card-content>
+      </ion-card>
+  <!-- ion-card -->
+      <div  text-center style="margin-top: 10vh"> 
+        <ion-button shape="round" large icon-right (click)="getSportsQuestions($event)" >
+          Get Started
+          <ion-icon name="play"></ion-icon>
+        </ion-button>
+      </div>    
+  </ion-content>
+  
